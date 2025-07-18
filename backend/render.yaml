@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: recomendaciones-backend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node index.js
+    rootDir: backend
+    envVars:
+      - key: MONGO_URI
+        value: <tu URI de MongoDB Atlas>
+      - key: OPENROUTER_API_KEY
+        value: <tu clave API de OpenRouter>
