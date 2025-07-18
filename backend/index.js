@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/api/peliculas', PeliculasRouter);
 
 // ruta de /api/recomendaciones
-app.listen(4000, () => console.log('Servidor corriendo en http://localhost:4000'));
+
 
 const PORT = 4000; 
 app.post('/api/recomendaciones', async (req, res) => {
@@ -61,3 +61,4 @@ app.post('/api/recomendaciones', async (req, res) => {
     res.status(500).json({ error: 'No se pudo obtener datos de MongoDB' });
   }
 });
+app.listen(4000, () => console.log('Servidor corriendo en http://localhost:4000'));
