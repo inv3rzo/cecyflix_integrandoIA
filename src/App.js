@@ -34,7 +34,7 @@ function App() {
 
   const handleBuscarDescripcion = async () => {
     try {
-      const res = await  fetch('https://recomendaciones-backend.onrender.com/api/recomendaciones', {
+      const res = await  fetch('https://cecyflix-integrandoia.onrender.com/api/recomendaciones', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: `Dame una recomendación basada en esta descripción:
